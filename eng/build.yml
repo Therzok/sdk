@@ -135,6 +135,13 @@ jobs:
         displayName: Python Version
       - script: python3 --version
         displayName: Python3 Version
+      - script: alias python='python3'
+        displayName: Set Python Alias
+        
+      - script: python --version
+        displayName: Python Version Again
+      - script: python3 --version
+        displayName: Python3 Version Again
       - script: eng/common/cibuild.sh
                   --configuration $(_BuildConfig)
                   $(_SignArgs)
